@@ -1,0 +1,32 @@
+.Button{
+  background-color: rgb(135, 206, 235);
+  color:white;
+  cursor:pointer;
+  border:2px solid transparent;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.Button:hover{
+  border:2px solid rgb(0,0,0);
+}
+
+.Button_POSITIVE{
+  background-color: rgb(100,201,100);
+  color:white;
+}
+
+.Button_NEGATIVE{
+  background-color: rgb(253,86,95);
+  color: white;
+}
+.Button_SIGNUP{
+  background-color: white;
+  color: rgb(140,80,100);
+}
+.Button_SIGNUP:hover{
+  border:2px solid transparent;
+  color:rgb(100,201,100);
+}

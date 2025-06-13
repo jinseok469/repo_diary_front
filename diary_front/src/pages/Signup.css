@@ -1,0 +1,48 @@
+.Signup_header{
+
+  margin-top: 20px;
+}
+
+.Signup_main{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.Signup_input{
+  margin-top:50px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.Signup_input > input {
+  margin-bottom: 20px;
+  padding:10px;
+  border-radius: 5px;
+  width: 50%;
+  border:1px solid rgb(100,100,100);
+}
+
+.passwordck.error:focus {
+  outline: none;
+  border:1px solid rgb(253,86,95);
+}
+
+.errorMsg {
+  color: rgb(253, 86, 95);
+  font-size: 0.9rem;
+  margin-top: -15px;
+  margin-bottom: 10px;
+  text-align: left;
+  width: 50%;
+  visibility: hidden;
+}
+.errorMsg.true{
+  visibility: visible;
+}
+
+.Signup_footer{
+  margin-top:30px;
+  display: flex;
+  justify-content: center;
+}

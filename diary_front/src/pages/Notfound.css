@@ -1,0 +1,12 @@
+.Notfound > .img_section{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  gap:20px;
+  padding : 100px;
+}
+
+.Notfound > .img_section > img {
+  width: 300px;
+}
