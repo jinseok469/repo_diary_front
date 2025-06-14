@@ -39,10 +39,7 @@ const Signup = () => {
     } else {
       setIsError(false);
       try {
-        const res = await axios.post(
-          "http://localhost:8080/api/insert",
-          newItem
-        );
+        const res = await axios.post("/api/insert", newItem);
         alert(res.data);
         nav("/login", { replace: true });
       } catch (err) {

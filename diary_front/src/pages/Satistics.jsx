@@ -38,7 +38,7 @@ const Satistics = () => {
       ) {
         try {
           const res = await axios.post(
-            "http://localhost:8080/api/satistics",
+            "/api/satistics",
             location?.state?.monthlyData
           );
 
@@ -65,10 +65,7 @@ const Satistics = () => {
         location?.state?.monthlyData.length > 0
       ) {
         try {
-          const res = await axios.post(
-            "http://localhost:8080/api/ai",
-            location?.state?.monthlyData
-          );
+          const res = await axios.post("/api/ai", location?.state?.monthlyData);
           setSatisticsAi(res.data);
         } catch (err) {
           console.error("감정 ai 불러오기 실패", err);

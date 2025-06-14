@@ -7,8 +7,8 @@ import "./Login.css";
 import { useNavigate } from "react-router-dom";
 const Login = () => {
   const [state, setState] = useState(1);
-  const [userId, setUserId] = useState("");
-  const [password, setPassword] = useState("");
+  const [userId, setUserId] = useState("jinseok");
+  const [password, setPassword] = useState("wlstjr");
   const idRef = useRef();
   const pwRef = useRef();
   const nav = useNavigate();
@@ -25,7 +25,7 @@ const Login = () => {
 
     // 로그인 버튼 눌렀을 때 호출
     axios
-      .post("http://localhost:8080/api/login", { userId, password })
+      .post("/api/login", { userId, password })
       .then((res) => {
         localStorage.setItem("token", res.data);
         nav("/");

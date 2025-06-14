@@ -74,7 +74,7 @@ const Home = () => {
               })
             }
           >
-            이달의 감정 통계
+            이달의 감정 분석
           </button>
         </section>
         <section className="Home_name">

@@ -39,7 +39,7 @@ function MainApp() {
       const decode = jwtDecode(token);
       const user_id = decode.sub;
       axios
-        .get(`http://localhost:8080/api/diary?id=${user_id}`)
+        .get(`/api/diary?id=${user_id}`)
         .then((res) => {
           setData(res.data);
         })
@@ -65,10 +65,7 @@ function MainApp() {
     };
     try {
       console.log(newItem);
-      const res = await axios.post(
-        "http://localhost:8080/api/diary/new",
-        newItem
-      );
+      const res = await axios.post("/api/diary/new", newItem);
       setData((prev) => [res.data, ...prev]);
     } catch (err) {
       console.error("일기 생성 실패");
@@ -84,10 +81,7 @@ function MainApp() {
       content,
     };
     try {
-      const res = await axios.put(
-        "http://localhost:8080/api/diary/edit",
-        newItem
-      );
+      const res = await axios.put("/api/diary/edit", newItem);
       setData((prev) =>
         prev.map((item) => {
           return String(item.id) === String(id)
@@ -109,10 +103,7 @@ function MainApp() {
       return;
     }
     try {
-      const res = await axios.put(
-        "http://localhost:8080/api/diary/uele",
-        newItem
-      );
+      const res = await axios.put("/api/diary/uele", newItem);
 
       setData((prev) =>
         prev.filter((item) => {
