@@ -62,17 +62,33 @@ const Home = () => {
   return (
     <div className="Home">
       <div className="User">
-        <section>
+        <section className="Home_satistics">
+          <button
+            className="button_satistics"
+            onClick={() =>
+              nav("/satistics", {
+                state: {
+                  monthlyData,
+                  pivotDate,
+                },
+              })
+            }
+          >
+            이달의 감정 통계
+          </button>
+        </section>
+        <section className="Home_name">
           <h2>{name}의 일기장</h2>
         </section>
-        <section>
-          <Button
+        <section className="Home_logout">
+          <button
             onClick={() => {
               localStorage.clear();
               nav("/", { replace: true });
             }}
-            text={"log out"}
-          ></Button>
+          >
+            log out
+          </button>
         </section>
       </div>
       <Header

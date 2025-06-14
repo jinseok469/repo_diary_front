@@ -4,6 +4,7 @@ import Diary from "./pages/Diary";
 import New from "./pages/New";
 import Notfound from "./pages/Notfound";
 import Edit from "./pages/Edit";
+import Satistics from "./pages/Satistics";
 import { Routes, Route, Link, useNavigate } from "react-router-dom";
 import { getEmotionImage } from "./util/get-emotion-image";
 import {
@@ -24,15 +25,16 @@ export const DiaryDispatchContext = createContext();
 function MainApp() {
   const [data, setData] = useState([]);
   const nav = useNavigate();
+  const token = localStorage.getItem("token");
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
-
     if (!token) {
       nav("/login");
       return;
     }
+  }, [token]);
 
+  useEffect(() => {
     try {
       const decode = jwtDecode(token);
       const user_id = decode.sub;
@@ -48,7 +50,7 @@ function MainApp() {
       localStorage.removeItem("token");
       nav("/login");
     }
-  }, [nav]);
+  }, [nav, token]);
   // 새로운 일기 추가
   const onCreate = async (createdDate, emotionId, content) => {
     const decode = jwtDecode(token);
@@ -135,6 +137,7 @@ function MainApp() {
             <Route path="/" element={<Home />}></Route>
             <Route path="/diary/:id" element={<Diary />}></Route>
             <Route path="/new" element={<New />}></Route>
+            <Route path="/Satistics" element={<Satistics />}></Route>
             <Route path="*" element={<Notfound />}></Route>
           </Routes>
         </DiaryDispatchContext.Provider>

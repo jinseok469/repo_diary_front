@@ -1,0 +1,107 @@
+.button_back{
+  padding:10px;
+}
+
+.Satistics{
+  width: 100%;
+}
+
+.Satistics_img{
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 250px;
+  justify-content: space-around;
+  margin: 0 auto;
+  align-items: center;
+  font-size:25px;
+  color:white;
+}
+
+.Satistics_img_1{
+   background-color: rgb(100,201,100);
+}
+.Satistics_img_2{
+  background-color: rgb(157,215,114);
+}
+.Satistics_img_3{
+  background-color: rgb(253,206,23);
+}
+.Satistics_img_4{
+   background-color: rgb(253,132,70);
+}
+.Satistics_img_5{
+   background-color: rgb(253,86,96);
+}
+.emotion_box_1{
+   background-color: rgb(100,201,100);
+}
+.emotion_box_2{
+  background-color: rgb(157,215,114);
+}
+.emotion_box_3{
+  background-color: rgb(253,206,23);
+}
+.emotion_box_4{
+   background-color: rgb(253,132,70);
+}
+.emotion_box_5{
+   background-color: rgb(253,86,96);
+}
+
+.Satistics_header{
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.Satistics_text{
+  margin-top: 50px;
+  width: 100%;
+  min-height: 300px;
+ background-color: rgb(236,236,236);
+ border-radius: 5px;
+
+ word-break : keep-all;
+ overflow-wrap: break-word;
+}
+
+.Satistics_text > p {
+   padding: 20px;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 2.5;
+}
+
+
+
+.Satistics_side_emotions {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.emotion_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  color:white;
+}
+.emotion_box img {
+  width: 40px;
+  height: 40px;
+}
+
+.emotion_box_text {
+  text-align: center;
+  font-size:25px;
+}
+
+.emotion_box_name {
+  margin-top: 15px;
+}
